@@ -1,0 +1,172 @@
+<h2>Appointment Setting</h2>
+<div nz-row>
+  <div nz-row>
+    <div nz-col nzSpan="11">
+      <nz-card>
+        <h3 class="title">Setup</h3>
+        <form nz-form class="login-form">
+          <div nz-row [nzGutter]="24">
+            <div nz-col [nzSpan]="8">
+              <nz-form-item>
+                <nz-form-label >Who can confirm?</nz-form-label>
+              </nz-form-item>
+            </div>
+            <div nz-col [nzSpan]="16">
+              <nz-form-item>
+                <nz-form-control>
+                  <label nz-checkbox>Seller</label>
+                  <label nz-checkbox>Listing Agent</label>
+                  <label nz-checkbox>Auto</label>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+          
+          <div nz-row [nzGutter]="24">
+            <div nz-col [nzSpan]="8">
+              <nz-form-item>
+                <nz-form-label>Min notice required</nz-form-label>
+              </nz-form-item>
+            </div>
+            <div nz-col [nzSpan]="16">
+              <nz-form-item>
+                <nz-form-control>
+                  <nz-select nzShowSearch ngModel="jack" name="minnotice">
+                    <nz-option nzLabel="Jack" nzValue="jack"></nz-option>
+                    <nz-option nzLabel="Lucy" nzValue="lucy"></nz-option>
+                    <nz-option nzLabel="Tom" nzValue="tom"></nz-option>
+                  </nz-select>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+
+
+          <div nz-row [nzGutter]="24">
+            <div nz-col [nzSpan]="8">
+              <nz-form-item>
+                <nz-form-label>Duration</nz-form-label>
+              </nz-form-item>
+            </div>
+            <div nz-col [nzSpan]="16">
+              <nz-form-item>
+                <nz-form-control>
+                  <label nz-checkbox>15 mins</label>
+                  <label nz-checkbox >30 mins</label>
+                  <label nz-checkbox>60 mins</label>
+                  <label nz-checkbox>Custom</label>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+
+
+          <div nz-row [nzGutter]="24">
+            <div nz-col [nzSpan]="8">
+              <nz-form-item>
+                <nz-form-label>Double-booking</nz-form-label>
+              </nz-form-item>
+            </div>
+            <div nz-col [nzSpan]="16">
+              <nz-form-item>
+                <nz-form-control>
+                  <nz-select nzShowSearch ngModel="yes" name="booking">
+                    <nz-option nzLabel="Yes" nzValue="yes"></nz-option>
+                    <nz-option nzLabel="No" nzValue="no"></nz-option>
+                  </nz-select>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+
+
+          <div nz-row [nzGutter]="24">
+            <div nz-col [nzSpan]="8">
+              <nz-form-item>
+                <nz-form-label>Office instruction</nz-form-label>
+              </nz-form-item>
+            </div>
+            <div nz-col [nzSpan]="16">
+              <nz-form-item>
+                <nz-form-control>
+                  <textarea rows="2" nz-input placeholder="Type instructions here..."></textarea>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+
+          
+          <button nz-button class="login-form-button" [nzType]="'primary'">Save</button>
+          
+        </form>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="2"></div>
+
+    <div nz-col nzSpan="11">
+      <nz-card>
+        <h3>Showing instructions</h3>
+        <form nz-form class="login-form">
+          <div nz-row [nzGutter]="24">
+            <div nz-col [nzSpan]="8">
+              <nz-form-item>
+                <nz-form-label>Lockbox</nz-form-label>
+              </nz-form-item>
+            </div>
+            <div nz-col [nzSpan]="16">
+              <nz-form-item>
+                <nz-form-control>
+                  <nz-select nzShowSearch  nzPlaceHolder="Select a person" 
+                    ngModel="jack" name="selectedValue">
+                    <nz-option nzLabel="Jack" nzValue="jack"></nz-option>
+                    <nz-option nzLabel="Lucy" nzValue="lucy"></nz-option>
+                    <nz-option nzLabel="Tom" nzValue="tom"></nz-option>
+                  </nz-select>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+
+          <div nz-row [nzGutter]="24">
+            <div nz-col [nzSpan]="8">
+              <nz-form-item>
+                <nz-form-label>Collect feedback</nz-form-label>
+              </nz-form-item>
+            </div>
+            <div nz-col [nzSpan]="16">
+              <nz-form-item>
+                <nz-form-control>
+                  <nz-select nzShowSearch ngModel="yes" [ngModelOptions]="{standalone: true}">
+                    <nz-option nzLabel="Yes" nzValue="yes"></nz-option>
+                    <nz-option nzLabel="No" nzValue="no"></nz-option>
+                  </nz-select>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+
+          <div nz-row [nzGutter]="24">
+            <div nz-col [nzSpan]="8">
+              <nz-form-item>
+                <nz-form-label>Co-op agent instruction</nz-form-label>
+              </nz-form-item>
+            </div>
+            <div nz-col [nzSpan]="16">
+              <nz-form-item>
+                <nz-form-control>
+                  <textarea rows="2" nz-input placeholder="Type instructions here..."></textarea>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+
+          <nz-form-control>
+            <button nz-button class="login-form-button" nzType="default" nzBlock>Save</button>
+          </nz-form-control>
+        </form>
+      </nz-card>
+    </div>
+  </div>
+</div>
+<!-- <full-calendar [options]="calendarOptions"></full-calendar> -->
